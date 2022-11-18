@@ -20,22 +20,27 @@ class _HomePageState extends State<HomePage> {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-              const Text(
-                "Hi, Son Handsome!",
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 24,
-                  fontWeight: FontWeight.bold
-                ),
-              ),
-              SizedBox(
-                height: 8,
-              ),
-              Text(
-                  "17 May 2000",
-                style: TextStyle(
-                  color: Colors.blue[200]
-                ),
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  const Text(
+                    "Hi, Son Handsome!",
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 24,
+                        fontWeight: FontWeight.bold
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 8,
+                  ),
+                  Text(
+                    "17 May 2000",
+                    style: TextStyle(
+                        color: Colors.blue[200]
+                    ),
+                  ),
+                ],
               ),
               Container(
                 decoration: BoxDecoration(
@@ -48,8 +53,55 @@ class _HomePageState extends State<HomePage> {
                   color: Colors.white,
                 ),
               )
-            ],)
-          ],),
+            ],
+            ),
+              const SizedBox(
+                height: 25,
+              ),
+              Container(
+                decoration: BoxDecoration(
+                  color: Colors.blue[600],
+                  borderRadius: BorderRadius.circular(12)
+                ),
+                padding: const EdgeInsets.all(12),
+                child: Row(
+                  children: const [
+                    Icon(
+                      Icons.search,
+                      color: Colors.white,
+                    ),
+                    Text(
+                        'Search',
+                      style: TextStyle(
+                        color: Colors.white
+                      ),
+                    )
+                  ],
+                )
+              ),
+              const SizedBox(
+                height: 25,
+              ),
+
+              Row(
+                children: const [
+                  Text(
+                      'How do you feel?',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold
+                    ),
+                  ),
+                  Icon(
+                      Icons.more_horiz,
+                    color: Colors.white,
+                  )
+                ],
+              )
+
+          ],
+          ),
         ),
       ),
     );
